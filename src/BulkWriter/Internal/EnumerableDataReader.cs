@@ -130,6 +130,8 @@ namespace BulkWriter.Internal
             }
         }
 
+        public override string GetString(int i) => GetValue(i).ToString();
+
         #region Not used by SqlBulkCopy
 
         public override string GetDataTypeName(int i) => throw new NotSupportedException();
@@ -161,8 +163,6 @@ namespace BulkWriter.Internal
         public override float GetFloat(int i) => throw new NotSupportedException();
 
         public override double GetDouble(int i) => throw new NotSupportedException();
-
-        public override string GetString(int i) => throw new NotSupportedException();
 
         public override decimal GetDecimal(int i) => throw new NotSupportedException();
 
